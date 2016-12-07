@@ -6,9 +6,31 @@ public class Square {
 	private Color _color;
 	
 	//constructor
-	public Square(int position, Color color) {
+	public Square(char colour) {
+		
 		//this._position = position;
-		this._color = color;
+		if (colour == 'r'){
+			this._color = Color.RED;
+		}
+		else if (colour == 'b'){
+			this._color = Color.BLUE;
+		}
+		else if (colour == 'w'){
+			this._color = Color.WHITE;
+		}
+		else if (colour == 'o'){
+			this._color = Color.ORANGE;
+		}
+		else if (colour == 'y'){
+			this._color = Color.YELLOW;
+		}
+		else if (colour == 'g'){
+			this._color = Color.GREEN;
+		}
+		else {
+			System.out.println("An error occured. Color of square could not be assigned.");
+		}
+		
 	}
 	
 	//getter
