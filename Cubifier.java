@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Cubifier {
 
@@ -19,7 +21,11 @@ public class Cubifier {
 		
 		char[] inputArray = line.toCharArray();
 		
+		//TriedCubes listOfTries = new TriedCubes();
 		Cube cube = new Cube(inputArray);
+		
+		System.out.println("Your original cube:");
+		cube.PrintCube(cube);
 		
 		if (cube.Solve(cube)){
 			
@@ -32,7 +38,8 @@ public class Cubifier {
 			//if no solution was found
 			System.out.println("Sorry, but we couldn't solve your cube.");
 			System.out.println("This was most likely an error on our end. Please send us a message about it!");
-			
+			System.out.println("Here is the unsolved cube you wound up with.");
+			cube.PrintCube(cube);
 		}
 
 	}
